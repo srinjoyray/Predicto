@@ -1,0 +1,37 @@
+.profile-body{
+    min-height: 80vh;
+}
+.profile-heading{
+    display:flex;
+    justify-content:center;
+    padding : 2vw;
+}
+.data{
+    display:flex;
+    align-items: center;
+    padding: 2vw;
+    /* margin : 2vw; */
+}
+.game-details{
+    padding-bottom: 5vh;
+}
+.profile-btn{
+    display:flex;
+    justify-content:center;
+    background-color:inherit!important;
+    margin: 1vh 0;
+}
+.edit{
+    padding-top:3vh;
+    background-color: blue!important;
+    display:flex!important;
+    margin : 0 2vw!important;
+    width : 40vw;
+}
+.delete{
+    padding-top:3vh;
+    background-color: red!important;
+    display:flex!important;
+    margin : 0 2vw!important;
+    width : 40vw;
+}

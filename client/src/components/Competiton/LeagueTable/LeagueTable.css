@@ -1,0 +1,33 @@
+.table{
+    margin-top: 5vh !important;
+}
+.header{
+    
+    background-color: rgb(151, 151, 206);
+    color: white;
+}
+.position{
+    /* display : flex !important; */
+    width:2vw;
+    text-align: center;
+    /* border : 2px solid red; */
+}
+.team{
+    text-align: center !important;
+    /* border : 2px solid red; */
+}
+.type1{
+    text-align: center !important;
+    /* border : 2px solid red; */
+    width : 12vw;
+}
+.type2{
+    text-align: center !important;
+    /* border : 2px solid red; */
+    width: 5vw;
+}
+@media only screen and (max-width: 768px) {
+    .type2{
+        display:none !important;
+    }
+}

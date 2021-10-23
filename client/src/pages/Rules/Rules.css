@@ -1,0 +1,38 @@
+.rules-body{
+    min-height: 80vh;
+    margin-left:10vw;
+    margin-right:10vw;
+}
+.rules-heading{
+    display: flex;
+    justify-content: center;
+    font-size:50px;
+    margin-top: 5vh;
+}
+.rules-image{
+    width:320px;
+    margin:auto;
+    display: flex;
+  
+}
+.rules-intro{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin: 5vh 0;
+}
+.rules-main{
+    margin-bottom: 4vh;
+    font-size: 25px;
+    
+}
+.rules-list{
+    list-style-type: disc;
+    font-size: 25px;
+}
+.rules-list li{
+    margin-top: 2vh;
+}
+.points{
+    color:#37056e;
+}

@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&family=Ubuntu&display=swap');
+.footer{
+    height : 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Scheherazade New', serif;
+}

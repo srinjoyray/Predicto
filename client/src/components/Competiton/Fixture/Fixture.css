@@ -1,0 +1,35 @@
+.fixture-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.fixture-date-row{
+    background-color: rgb(234 208 234);
+    width:100vw;    
+    display: flex !important;
+    margin: 5px 2px !important;
+    margin-top: 12px !important;
+    border-bottom : 2px solid rebeccapurple;
+    /* border-radius: 5px; */
+}
+.fixture-date-cell{
+    font-weight: 800 !important;
+    /* display: table-cell; */
+    padding: 16px;
+    font-size: 0.875rem;
+    text-align: left;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.43;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    letter-spacing: 0.01071em;
+    vertical-align: inherit;
+} 
+.fix-loader{
+    width:30vw !important;
+    height: 20vh !important;
+    margin: auto;
+    margin-top: 10vh;
+    display: flex !important;
+    justify-content: center !important;
+}

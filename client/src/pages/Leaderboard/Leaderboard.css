@@ -1,0 +1,66 @@
+.leaderboard-body{
+    min-height: 80vh;
+}
+.leaderboard-heading{
+    display: flex;
+    justify-content: center;
+    font-size:50px;
+    margin-top: 5vh;
+}
+.icon{
+    width:20vw ;
+}
+.leaderboard-table{
+    width: 100vw !important;
+   
+}
+.leaderboard-table-head{
+    width:100vw !important;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    padding-top: 5vh;
+}
+.leaderboard-table-body{
+    width : 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.leaderboard-table-row{
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    margin:2vh 0;
+}
+.leaderboard-name{
+    display: flex;
+    justify-content: center;
+    width: 25vw !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    
+}
+.leaderboard-email{
+    display: flex;
+    justify-content: center;
+    width: 30vw !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+.leaderboard-points{
+    display: flex;
+    justify-content: center;
+    width: 20vw !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    
+}
+.leaderboard-team{
+    display: flex;
+    justify-content: center;
+    width: 25vw !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    
+}   
