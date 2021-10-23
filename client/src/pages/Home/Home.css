@@ -10,8 +10,9 @@
 }
 
 .home{
-    min-width: 80vh;
+    min-height: 80vh;
     margin-bottom: 0;
+    width:100vw;
 }
 .home-body{
     /* display:flex;

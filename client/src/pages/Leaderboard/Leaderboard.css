@@ -35,10 +35,10 @@
 .leaderboard-name{
     display: flex;
     justify-content: center;
-    width: 25vw !important;
+    width: 23vw !important;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    
+    margin-right: 2vw;
 }
 .leaderboard-email{
     display: flex;
@@ -54,7 +54,7 @@
     width: 20vw !important;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    
+    margin-right: 1vw;
 }
 .leaderboard-team{
     display: flex;
