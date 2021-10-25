@@ -1,14 +1,14 @@
 .leaderboard-body{
-    min-height: 80vh;
+    min-height: 85vh;
+    background-color: #08133d;
+    color: wheat;
 }
 .leaderboard-heading{
     display: flex;
     justify-content: center;
     font-size:50px;
-    margin-top: 5vh;
-}
-.icon{
-    width:20vw ;
+    padding-top: 5vh;
+    color:#7acad2;
 }
 .leaderboard-table{
     width: 100vw !important;
@@ -18,13 +18,16 @@
     width:100vw !important;
     display: flex;
     flex-direction: row;
-    font-size: 20px;
+    font-size: 30px;
     padding-top: 5vh;
+    text-align: center;
 }
 .leaderboard-table-body{
     width : 100vw;
     display: flex;
     flex-direction: column;
+    font-size: 18px;
+    text-align: center;
 }
 .leaderboard-table-row{
     width:100vw;
@@ -64,3 +67,15 @@
     overflow-wrap: break-word;
     
 }   
+
+@media only screen and (max-width: 600px) {
+    .leaderboard-heading{
+        font-size: 30px;
+    }
+    .leaderboard-table-head{
+        font-size: 20px;
+    }
+    .leaderboard-table-body{
+        font-size: 14px;
+    }
+}

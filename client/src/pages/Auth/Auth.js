@@ -48,7 +48,8 @@ const Auth = () => {
     };
 
     return (
-        <Container component="container" maxWidth="xs" >
+        <div>
+        <Container component="container" maxWidth="xs" className={classes.body}>
             <Paper className={classes.paper} elevation={3}>
                 <Avatar className={classes.avatar}>
                     <LockOutlinedIcon />
@@ -101,6 +102,7 @@ const Auth = () => {
                 </form>
             </Paper>
         </Container>
+        </div>
     )
 }
 

@@ -1,5 +1,7 @@
-.body{
-    min-height: 80vh;
+.matches-body{
+    min-height: 85vh;
+    background-color: #08133d;
+    padding-top: 2vh;
 }
 .competition-select{
     margin: 8px 5px !important;

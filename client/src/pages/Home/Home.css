@@ -3,7 +3,7 @@
 .tagline{
     text-align: center;
     opacity: 1;
-    color:#141d49;
+    color:#bbc4f2;
     font-family: 'EB Garamond', serif !important;
     font-size: 8vw !important;
     padding-top: 5vh !important;
@@ -13,11 +13,13 @@
     min-height: 80vh;
     margin-bottom: 0;
     width:100vw;
+    background-color:  #08133d;
+    padding-bottom: 10vh !important;
 }
 .home-body{
     /* display:flex;
     flex-direction: column; */
-
+    color: rgb(206 226 224 / 87%);
 }
 .home-intro{
     display:flex;
@@ -55,15 +57,15 @@
     padding: 2vh;
 }
 .button{
-    background-color: #1b1b60 !important  ;
+    background-color: #2e2eb4 !important  ;
     color: white !important;
     text-decoration: none!important;
     display: flex!important;
     margin: auto!important;
-    /* margin-bottom: 5vh!important; */
+    margin-bottom: 5vh!important;
 } 
 .btn-span{
-    text-decoration-color: #1b1b60;
+    text-decoration-color: #2e2eb4;
     text-decoration-line: underline;
     padding: 1vh 5vw!important;
     
@@ -72,18 +74,16 @@
     .tagline{
         font-size: 3vw !important;
     }
-    
-    
+    .button{
+        margin-top: 10vh !important;
+        
+    }
+    .home{
+        padding-bottom: 10vh !important;
+    }
+    .list{
+        text-align: center;
+    }
 }
 
 
-/*
-.card{
-    padding : 20px;
-    margin-top: 2vh;
-    text-align: center;
-    background-color: transparent !important;
-    color:black !important;
-}
-
-*/

@@ -1,6 +1,12 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
+  body:{
+    // minHeight: '90vh',
+    // backgroundColor:'#08133d',
+    marginBottom:'17vh',
+    marginTop:'0',
+  },
   paper: {
     marginTop: theme.spacing(8),
     display: 'flex',

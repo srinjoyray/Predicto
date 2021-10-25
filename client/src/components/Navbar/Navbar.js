@@ -32,10 +32,6 @@ const useStyles = makeStyles(theme => ({
   },
   acount: {
     marginLeft: 'auto !important',
-    '&:hover': {
-      background: 'purple',
-    },
-
   },
   tabsContainer: {
     marginLeft: 'auto',
@@ -169,34 +165,10 @@ const Navbar = () => {
               </Toolbar>
             </>
 
-          )}
-
-          {/* <Button
-            aria-controls='menu'
-            onMouseOver={handleOpenMenu}
-            className={classes.acount}
-            disableElevation
-            disableRipple
-            variant='contained'
-            color='secondary'>
-            Profile
-          </Button> */}
-          
+          )}          
         </Toolbar>
       </AppBar>
-      {/* Menu */}
-      {/* <Menu
-        style={{ marginTop: '50px' }}
-        id='menu'
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleCloseMenu}>
-        <MenuItem onClick={handleCloseMenu}>My Account</MenuItem>
-        <MenuItem onClick={handleCloseMenu}>Examination Results</MenuItem>
-        <MenuItem onClick={handleCloseMenu}>Promotions</MenuItem>
-        <MenuItem onClick={handleCloseMenu}>Pending Fees</MenuItem>
-        <MenuItem onClick={handleCloseMenu}>Final Project</MenuItem>
-      </Menu> */}
+      
     </>
   );
 };

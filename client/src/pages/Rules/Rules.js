@@ -1,4 +1,5 @@
-import rules from '../../images/rules.jpg' 
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+ 
 import './Rules.css';
 
 const Rules = () => {
@@ -11,7 +12,24 @@ const Rules = () => {
             <div className="rules-intro">
                 Predictor is the game where you put your prediction skills to the test. Predict the scoreline of every match in the Premier League, La Liga, UEFA Champions League. Score points by predicting the correct results and climb the leaderboards.
             </div>
-            <img className="rules-image" src={rules} width="100px" />
+            <div className="rules-image-alt" >
+                <p className="rules-image-alt-para">
+                    <span className="rules-image-alt-left"><CheckCircleIcon color="success"/> Correct result</span>
+                    <span className="rules-image-alt-right">3pts</span>
+                </p>
+                <p className="rules-image-alt-para">
+                    <span className="rules-image-alt-left"><CheckCircleIcon color="success"/> Goal difference</span>
+                    <span className="rules-image-alt-right">1pt</span>
+                </p>
+                <p className="rules-image-alt-para">
+                    <span className="rules-image-alt-left"><CheckCircleIcon color="success"/> Home goals</span>
+                    <span className="rules-image-alt-right">1pt</span>
+                </p>
+                <p className="rules-image-alt-para">
+                    <span className="rules-image-alt-left"><CheckCircleIcon color="success" /> Away goals</span>
+                    <span className="rules-image-alt-right">1pt</span>
+                </p>
+            </div>
             <div className="rules-main">
                 <p>For each match, points are awarded for:</p>
                 <ul className="rules-list" >

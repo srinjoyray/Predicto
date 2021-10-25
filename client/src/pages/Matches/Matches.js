@@ -6,7 +6,7 @@ const Home = () => {
     const [competitionId, setCompetitionId] = useState(1);
     // console.log(competitionId);
     return (
-        <div className="body">
+        <div className="matches-body">
             <div className="competition-select">
                 <CompetitionSelect competitionId={competitionId} setCompetitionId={setCompetitionId}/>
             </div>

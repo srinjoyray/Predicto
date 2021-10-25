@@ -1,17 +1,13 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { CssBaseline, Typography,Card,CardActions,CardContent,Button} from "@material-ui/core";
 import { Link } from "react-router-dom";
-import home1 from '../../images/home1.jpg'
+
 import './Home.css';
 const useStyles = makeStyles((theme)=>({
     root : {
         // minHeight:'100vh',
         width:'100vw',
         minHeight:'100vh',
-        backgroundImage: `url(${home1})`,
-        backgroundRepeat:"no-repeat",
-        backgroundSize:'cover',
-        opacity:'0.2',
         position:'fixed',
     },
 }));

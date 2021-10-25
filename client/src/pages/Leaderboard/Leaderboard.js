@@ -1,8 +1,6 @@
-import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import { useEffect, useState } from 'react';
 import { useDispatch,useSelector } from 'react-redux';
 import { leaderboard } from '../../actions/auth';
-import { TableHead,Table,TableBody,TableCell,TableRow } from '@mui/material';
 import axios from 'axios';
 
 import './Leaderboard.css';
@@ -30,28 +28,34 @@ const Leaderboard = () => {
 
     const calculatePoints = (item) => {
         // console.log(item);
-        let count=0;
+        let count=0,noOfGames=0;
         item?.games?.map((game)=>{
             ucl?.matches?.map((i)=>{
                 if(i.id===game.id && i.status.short==='FT'){
                     // console.log(game,i);
+                    noOfGames++;
                     count+=pointFunction(game.homeTeamScore,game.awayTeamScore,i['home-team'].score,i['away-team'].score);
                 }
             })
             laLiga?.matches?.map((i)=>{
                 if(i.id===game.id && i.status.short==='FT'){
                     // console.log(game,i);
+                    noOfGames++;
                     count+=pointFunction(game.homeTeamScore,game.awayTeamScore,i['home-team'].score,i['away-team'].score);
                 }
             })
             pl?.matches?.map((i)=>{
                 if(i.id===game.id && i.status.short==='FT'){
                     // console.log(game,i);
+                    noOfGames++;
                     count+=pointFunction(game.homeTeamScore,game.awayTeamScore,i['home-team'].score,i['away-team'].score);
                 }
             })
         })
-        return count;
+        if(noOfGames===0){
+            return 0;
+        }
+        return count/noOfGames;
     }   
     const fetchResult = async() =>{
         const data1 = await axios.get(`https://football-web-pages1.p.rapidapi.com/fixtures-results.json?comp=24`,{ headers: { "x-rapidapi-key": process.env.REACT_APP_API_KEY } });
@@ -96,14 +100,14 @@ const Leaderboard = () => {
     return (
         <div className="leaderboard-body">
             <div className="leaderboard-heading">
-                Leaderboard <span className="icon"> <LeaderboardIcon /> </span>
+                Leaderboard
             </div>
             
             <div className="leaderboard-table">
                 <div className="leaderboard-table-head">
                     <span className="leaderboard-name">Name</span>
                     <span className="leaderboard-email">Email</span>
-                    <span className="leaderboard-points">Points</span>
+                    <span className="leaderboard-points">Points Avg</span>
                     <span className="leaderboard-team">Favourite Team</span>
                 </div>
                 
@@ -112,7 +116,7 @@ const Leaderboard = () => {
                         <div key={item.id} className="leaderboard-table-row">
                             <span className="leaderboard-name">{item.name}</span>
                             <span className="leaderboard-email">{item.email}</span>
-                            <span className="leaderboard-points">{item?.p}</span>
+                            <span className="leaderboard-points">{item?.p.toFixed(2)}</span>
                             <span className="leaderboard-team">{item.favouriteTeam ? item.favouriteTeam:'-'}</span>
                         </div>    
                     ))}
