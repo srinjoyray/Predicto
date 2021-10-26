@@ -42,7 +42,9 @@ const Rules = () => {
                         <p>Predict the correct goal difference: <span className="points">+1</span> point</p>
                     </li>
                 </ul>
-                
+            </div>
+            <div className="rules-day">
+                You can only predict matches scheduled in the next 7 days
             </div>
             
         </div>

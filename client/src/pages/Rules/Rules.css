@@ -62,7 +62,12 @@
 .points{
     color:white;
 }
-
+.rules-day{
+    display: flex;
+    /* justify-content: center; */
+    font-size: 25px;
+    padding: 4vh 0;
+}
 @media only screen and (max-width: 600px) {
     .rules-heading{
         font-size: 30px;
@@ -86,6 +91,9 @@
         font-size: 20px;
     }
     .rules-list{
+        font-size: 20px;
+    }
+    .rules-day{
         font-size: 20px;
     }
 }
