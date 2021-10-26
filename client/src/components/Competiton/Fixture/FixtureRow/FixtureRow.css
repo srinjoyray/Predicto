@@ -3,9 +3,11 @@
     width: 350px!important;
     display: flex;
     margin:2vh 2vw;
-    background-color: #371beb4d !important;
+    background-color: #1682944d  !important;
     min-height: 100px;
     border-radius: 20px;
+    color:#d8ffbb;
+    border: 2px solid #dee8e7;
 }
 .fix-row-body{
     width:100%;
@@ -32,11 +34,13 @@
     width : 50%;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 .fix-team2{
     width:50%;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 .fix-row-prediction{
     width : 100%;
@@ -47,7 +51,6 @@
 
 .btn{
     /* background-color: #371beb4d !important; */
-    color:blue;
     margin-bottom: 5px !important;
     display: flex;
     justify-content: center;

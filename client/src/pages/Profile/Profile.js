@@ -45,29 +45,38 @@ const Profile = () => {
 
     const calculatePoints = (item) => {
         // console.log(item);
-        let count=0;
+        let count=0,no_of_games=0;
         item?.games?.map((game)=>{
             // console.log(game.id);
             ucl?.matches?.map((i)=>{
                 if(i.id===game.id && i.status.short==='FT'){
                     // console.log(game,i);
+                    no_of_games++;
                     count+=pointFunction(game.homeTeamScore,game.awayTeamScore,i['home-team'].score,i['away-team'].score);
                 }
             })
             laLiga?.matches?.map((i)=>{
                 if(i.id===game.id && i.status.short==='FT'){
                     // console.log(game,i);
+                    no_of_games++;
                     count+=pointFunction(game.homeTeamScore,game.awayTeamScore,i['home-team'].score,i['away-team'].score);
                 }
             })
             pl?.matches?.map((i)=>{
                 if(i.id===game.id && i.status.short==='FT'){
                     // console.log(game,i);
+                    no_of_games++;
                     count+=pointFunction(game.homeTeamScore,game.awayTeamScore,i['home-team'].score,i['away-team'].score);
                 }
             })
         })
-        return count;
+        data.totalPoints=count;
+        if(no_of_games===0){
+            data.averagePoints=0;
+        }
+        else{
+            data.averagePoints=count/no_of_games;
+        }
     }   
     const fetchResult = async() =>{
         const data1 = await axios.get(`https://football-web-pages1.p.rapidapi.com/fixtures-results.json?comp=24`,{ headers: { "x-rapidapi-key": process.env.REACT_APP_API_KEY } });
@@ -87,7 +96,7 @@ const Profile = () => {
         fetchResult();
     }, [refresh])
 
-    if(data)data.p=calculatePoints(data);
+    if(data) calculatePoints(data);
 
     const logout = () => {
         dispatch({ type: 'LOGOUT' });
@@ -155,7 +164,7 @@ const Profile = () => {
         }
         return(
         <div>
-        <Button variant="outlined" onClick={handleClickOpen}>
+        <Button variant="outlined" onClick={handleClickOpen} className="profile-btn">
             Delete Account
         </Button>
         <Dialog
@@ -183,6 +192,9 @@ const Profile = () => {
 
     return (
         <div className="profile-body">
+            <div className="profile-heading">
+                Profile
+            </div>
         <Box
             sx={{
                 display: 'flex',
@@ -192,32 +204,34 @@ const Profile = () => {
                 width: '80vw',
                 },
                 justifyContent:'center',
+            
             }}
             
         >
-            <Paper elevation={12} >
-                <p className="profile-heading">Profile
-                </p>
-                <p className="data">
+            <Paper elevation={12} className="profile-paper">
+                <p className="profile-data">
                     Name : {data?.name}
                 </p>
-                <p className="data">
+                <p className="profile-data">
                     Email : {data?.email}
                 </p>
-                <p className="data">
+                <p className="profile-data">
                     Favourite Team : {data?.favouriteTeam?.length>0 ?  data?.favouriteTeam : <></> }{<AddModal/>}
                 </p>
-                <p className="data">
-                    Points : {data?.p}
+                <p className="profile-data">
+                    Total Points : {data?.totalPoints}
+                </p>
+                <p className="profile-data">
+                    Average Points : {data?.averagePoints.toFixed(2)}
                 </p>
                
-                <Accordion>
+                <Accordion className="profile-accordion">
                     <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
-                    >
-                        <Typography>Games: {data?.games?.length}</Typography>
+                    >   
+                        <p className="profile-accordion-data">Games: {data?.games?.length}</p>
                     </AccordionSummary>
                     <AccordionDetails>
                     {data?.games && data?.games.map((item)=>(
@@ -227,11 +241,7 @@ const Profile = () => {
                     ))}
                     </AccordionDetails>
                 </Accordion>
-                <div className="profile-btn">
-                    {/* <Button onClick={()=>handleEdit()} variant="contained" className="edit">Edit</Button> */}
-                    {/* <Button onClick={()=>handleDelete()} variant="contained" className="delete">Delete Account</Button> */}
-                    <DeleteModal/>
-                </div>
+                <DeleteModal/>
             </Paper>
         </Box>
         </div>

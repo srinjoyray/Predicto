@@ -3,29 +3,39 @@
 }
 .header{
     
-    background-color: rgb(151, 151, 206);
+    background-color: rgb(234 208 234);
     color: white;
 }
+
 .position{
-    /* display : flex !important; */
+    
     width:2vw;
     text-align: center;
-    /* border : 2px solid red; */
 }
 .team{
     text-align: center !important;
-    /* border : 2px solid red; */
 }
 .type1{
     text-align: center !important;
-    /* border : 2px solid red; */
     width : 12vw;
+    padding: 0 0 !important;
 }
 .type2{
     text-align: center !important;
-    /* border : 2px solid red; */
     width: 5vw;
 }
+.league-table-body{
+    width:100vw !important;
+}
+.table-loader{
+    width:30vw !important;
+    height: 20vh !important;
+    margin: auto;
+    margin-top: 10vh;
+    display: flex !important;
+    justify-content: center !important;
+}
+
 @media only screen and (max-width: 768px) {
     .type2{
         display:none !important;

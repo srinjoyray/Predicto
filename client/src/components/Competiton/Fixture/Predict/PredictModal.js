@@ -67,7 +67,7 @@ export default function PredictModal({item,score1,score2,setScore1,setScore2,cou
         <>
         {   user ? 
             <div>
-            <Button onClick={handleOpen}>Predict</Button>
+            <Button onClick={handleOpen} style={{color:'#d8ffbb'}}>Predict</Button>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -87,9 +87,7 @@ export default function PredictModal({item,score1,score2,setScore1,setScore2,cou
                         {item["away-team"].name}
                     </div>
                 </div>
-                {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                {item["home-team"].name} vs {item["away-team"].name}
-                </Typography> */}
+                
                 <div style={{display:'flex',flexDirection:'row',margin:'auto'}}>
                     <div style={{width:'40%',display:'flex',flexDirection:'row'}}>
                         <Button onClick={()=> (handleDecrement(counter1,1))} style={{minWidth:'30px'}}>-</Button>
@@ -102,8 +100,8 @@ export default function PredictModal({item,score1,score2,setScore1,setScore2,cou
                         <Button onClick={()=>(handleIncrement(counter2,2))} style={{minWidth:'30px'}}>+</Button>
                     </div>
                 </div>
-                <Button onClick={()=>handleSubmit()}>Submit</Button>
                 <Button onClick={()=>handleDelete()}>Delete</Button>
+                <Button onClick={()=>handleSubmit()}>Submit</Button>
                 </Box>
             </Modal>
             </div>

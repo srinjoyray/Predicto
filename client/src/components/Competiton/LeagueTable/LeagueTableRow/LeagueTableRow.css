@@ -1,24 +1,24 @@
-.position{
+.league-table-row-position{
     text-align: center !important;
-    /* width:1vw; */
-    border : 2px solid red;
+    color:wheat !important;
 }
-.team{
+.league-table-row-team{
     text-align: center !important;
-    border : 2px solid red;
+    color:wheat !important;
 }
-.type1{
+.league-table-row-type1{
     text-align: center !important;
-    border : 2px solid red;
     width : 12vw;
+    color:wheat !important;
 }
-.type2{
+.league-table-row-type2{
     text-align: center !important;
-    border : 2px solid red;
     width: 5vw;
+    color:wheat !important;
 }
 @media only screen and (max-width: 768px) {
-    .type2{
+    .league-table-row-type2{
         display:none !important;
     }
+    
 }

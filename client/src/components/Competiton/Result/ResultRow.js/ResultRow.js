@@ -41,11 +41,11 @@ const ResultRow = ({item,games}) => {
         <div className="res-row">
         <div key={item.id} className="res-row-body">
             <div className="res-row-name">
-                <span className="res-team1">{item["home-team"].name}<img src={logo1} width="20vw"/></span>
+                <span className="res-team1">{item["home-team"].name}<img src={logo1} width="20vw" height="20px"/></span>
                 <span className="res-score1">{item["home-team"].score}</span>
                 <span className="res-hyphen">:</span>
                 <span className="res-score2">{item["away-team"].score}</span>
-                <span className="res-team2"><img src={logo2} width="20vw"/>{item["away-team"].name}</span>
+                <span className="res-team2"><img src={logo2} width="20vw" height="20px"/>{item["away-team"].name}</span>
             </div>
            
             <div className="fix-row-prediction">

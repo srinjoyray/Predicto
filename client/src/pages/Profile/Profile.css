@@ -1,37 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 .profile-body{
-    min-height: 80vh;
+    min-height: 85vh;
+    padding-left:10vw;
+    padding-right:10vw;
+    background-color: #08133d;
+    color: wheat;
+}
+.profile-heading{
+    display: flex;
+    justify-content: center;
+    font-size:50px;
+    padding-top: 5vh;
+    color:#7acad2;
+}
+.profile-paper{
+    background-color: #87b1fe !important;
+    color: black !important;
+    padding-top: 2vh;
 }
 .profile-heading{
     display:flex;
     justify-content:center;
     padding : 2vw;
 }
-.data{
+.profile-data{
     display:flex;
     align-items: center;
-    padding: 2vw;
-    /* margin : 2vw; */
+    font-size: 20px;
+    padding: 2vh 2vw;
+    font-family: 'Zen Antique Soft', serif;
+}
+.profile-accordion-data{
+    font-size: 20px;
+    padding: 2vh 2vw;
+    font-family: 'Zen Antique Soft', serif;
 }
 .game-details{
-    padding-bottom: 5vh;
+    font-size: 20px;
+    padding: 1vh 2vw;
+    font-family: 'Roboto Condensed', sans-serif;
 }
+
+.profile-accordion{
+    background-color: #87b1fe !important;
+}
+
 .profile-btn{
-    display:flex;
-    justify-content:center;
+    display:flex !important;
     background-color:inherit!important;
-    margin: 1vh 0;
+    margin: auto !important;
+    margin-top: 2vh !important;
+    margin-bottom: 2vh !important;
+    color: white !important;
+    background-color: #d21250 !important;
 }
-.edit{
-    padding-top:3vh;
-    background-color: blue!important;
-    display:flex!important;
-    margin : 0 2vw!important;
-    width : 40vw;
-}
-.delete{
-    padding-top:3vh;
-    background-color: red!important;
-    display:flex!important;
-    margin : 0 2vw!important;
-    width : 40vw;
+
+@media only screen and (max-width: 600px) {
+    .profile-heading{
+        font-size: 30px;
+    }
+    .profile-data{
+        font-size: 17px;
+    }
+    .profile-accordion-data{
+        font-size: 17px;
+    }
+    .game-details{
+        font-size: 17px;
+    }
 }

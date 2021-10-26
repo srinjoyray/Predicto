@@ -7,6 +7,9 @@ const Home = () => {
     // console.log(competitionId);
     return (
         <div className="matches-body">
+            <div className="matches-heading">
+                Matches
+            </div>
             <div className="competition-select">
                 <CompetitionSelect competitionId={competitionId} setCompetitionId={setCompetitionId}/>
             </div>

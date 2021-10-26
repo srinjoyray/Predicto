@@ -2,9 +2,11 @@
     width: 350px!important;
     display: flex;
     margin:2vh 2vw;
-    background-color: #371beb4d !important;
+    background-color: #1682944d !important;
     min-height: 100px;
     border-radius: 20px;
+    color:#d8ffbb;
+    border: 2px solid #dee8e7;
 }
 .res-row-body{
     width:100%;
@@ -20,14 +22,17 @@
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 5px;
 }
 .res-team1{
     display: flex !important;
-    justify-content: flex-end !important;
+    justify-content: center !important;
     border:none !important;
     padding:0px !important;
     /* border-radius: 10px; */
     width: 37vw;
+    text-align: center;
     
 }
 .res-team1 img{
@@ -42,11 +47,12 @@
 .res-team2{
     display: flex !important;
    
-    justify-content: flex-start !important;
+    justify-content: center !important;
     border:none !important;
     padding:0px !important;
     /* border-radius: 10px; */
     width: 37vw;
+    text-align: center;
 }
 .res-team2 img{
     margin-right: 5px !important;
@@ -67,4 +73,6 @@
     display: flex !important;
     border:none !important;
     width: 20vw;
+    padding-top: 10px;
+    justify-content: center;
 }

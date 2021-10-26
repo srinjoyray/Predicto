@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Table,TableBody,TableHead,TableRow,TableCell } from "@material-ui/core";
 import axios from 'axios';
+import { CircularProgress } from '@mui/material';
 
 import LeagueTableRow from './LeagueTableRow/LeagueTableRow';
 import './LeagueTable.css';
@@ -27,7 +28,10 @@ const LeagueTable = ({ competitionId }) => {
     }, [competitionId]);
 
     return (
-        <Table className="table">
+        <>
+        {
+            standings.length ? 
+            <Table className="table">
             <TableHead className="header">
                 <TableRow >
                     <TableCell className="position">Pos</TableCell>
@@ -43,7 +47,7 @@ const LeagueTable = ({ competitionId }) => {
                 
                 </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody className="league-table-body">
                 {standings.map((item) => (
                     <TableRow key={item.id}>
                         <LeagueTableRow item={item}/>
@@ -52,6 +56,10 @@ const LeagueTable = ({ competitionId }) => {
                 ))}
             </TableBody>
         </Table>
+        :
+        <CircularProgress className="table-loader"/>
+        }
+        </>
     )
 }
 
