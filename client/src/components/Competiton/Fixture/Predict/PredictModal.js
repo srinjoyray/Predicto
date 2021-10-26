@@ -20,6 +20,9 @@ const style = {
   boxShadow: 24,
   p: 4,
   margin: 'auto',
+  padding:'20px',
+  backgroundColor: '#dccc8f',
+  borderRadius:'25px',
 };
 
 export default function PredictModal({item,score1,score2,setScore1,setScore2,counter1,counter2,setCounter1,setCounter2}) {
@@ -77,31 +80,34 @@ export default function PredictModal({item,score1,score2,setScore1,setScore2,cou
             >
                 <Box sx={style}>
                 <div style={{display:'flex',flexDirection:'row',margin:'auto'}}>
-                    <div style={{width:'40%',textAlign:'left'}}>
+                    <div style={{width:'45%',textAlign:'center'}}>
                         {item["home-team"].name}
                     </div>
-                    <div style={{textAlign:'center'}}>
+                    <div style={{textAlign:'center',width:'10%'}}>
                         vs
                     </div>
-                    <div style={{width:'40%',textAlign:'right'}}>
+                    <div style={{width:'45%',textAlign:'center'}}>
                         {item["away-team"].name}
                     </div>
                 </div>
                 
                 <div style={{display:'flex',flexDirection:'row',margin:'auto'}}>
-                    <div style={{width:'40%',display:'flex',flexDirection:'row'}}>
+                    <div style={{width:'45%',display:'flex',flexDirection:'row',justifyContent:'center',marginRight:'5%'}}>
                         <Button onClick={()=> (handleDecrement(counter1,1))} style={{minWidth:'30px'}}>-</Button>
                         <Button disabled={true} style={{minWidth:'30px'}}>{counter1}</Button>
                         <Button onClick={()=>(handleIncrement(counter1,1))} style={{minWidth:'30px'}}>+</Button>
                     </div>
-                    <div style={{width:'40%',display:'flex',flexDirection:'row',justifyContent:'center'}}>
+                    <div style={{width:'45%',display:'flex',flexDirection:'row',justifyContent:'center',marginLeft:'5%'}}>
                         <Button onClick={()=> (handleDecrement(counter2,2))} style={{minWidth:'30px'}}>-</Button>
                         <Button disabled={true} style={{minWidth:'30px'}}>{counter2}</Button>
                         <Button onClick={()=>(handleIncrement(counter2,2))} style={{minWidth:'30px'}}>+</Button>
                     </div>
                 </div>
-                <Button onClick={()=>handleDelete()}>Delete</Button>
-                <Button onClick={()=>handleSubmit()}>Submit</Button>
+                <div style={{display:'flex',justifyContent:'center'}}>
+                    <Button onClick={()=>handleSubmit()} style={{marginRight:'5%'}}>Submit</Button>
+                    <Button onClick={()=>handleDelete()} style={{marginLeft:'5%'}}>Delete</Button>
+                    
+                </div>
                 </Box>
             </Modal>
             </div>

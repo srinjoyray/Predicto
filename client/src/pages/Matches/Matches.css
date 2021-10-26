@@ -1,13 +1,12 @@
 .matches-body{
     min-height: 85vh;
     background-color: #08133d;
-    padding-top: 2vh;
 }
 .matches-heading{
     display: flex;
     justify-content: center;
     font-size:50px;
-    padding-top: 5vh;
+    padding-top: 2vh;
     color:#7acad2;
 }
 .competition-select{
