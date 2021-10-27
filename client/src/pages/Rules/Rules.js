@@ -10,7 +10,7 @@ const Rules = () => {
             </div>
             
             <div className="rules-intro">
-                Predictor is the game where you put your prediction skills to the test. Predict the scoreline of every match in the Premier League, La Liga, UEFA Champions League. Score points by predicting the correct results and climb the leaderboards.
+                Predicto is the game where you put your prediction skills to the test. Predict the scoreline of every match in the Premier League, La Liga, UEFA Champions League. Score points by predicting the correct results and climb the leaderboards.
             </div>
             <div className="rules-image-alt" >
                 <p className="rules-image-alt-para">
