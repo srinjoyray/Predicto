@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API = axios.create({baseURL:'https://predicto2.herokuapp.com'});
+const API = axios.create({baseURL:'https://predicto.onrender.com'});
+// const API = axios.create({baseURL:'https://predicto2.herokuapp.com'});
 // const API = axios.create({baseURL:'http://localhost:5000'});
 
 
